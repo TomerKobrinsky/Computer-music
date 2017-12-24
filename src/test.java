@@ -53,4 +53,6 @@ public class test {
 		player.play(pattern.prepend(pattern2));*/
 
 	}
+
+	//khen
 }
