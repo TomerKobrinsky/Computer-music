@@ -26,15 +26,25 @@ public class test {
 		System.out.println(tempo);
 		Mood Input;
 
+		// sets key according to The Mood Input
+		switch (Input) {
+		case Happy:
+			songKey = test.keyType.Major;
+			break;
+		case Sad:
+			songKey = test.keyType.Minor;
+		default:
+			System.out.println("error");
+			break;
+		}
+
 		/*
-		 * sets key according to switch (Input) { case Happy: songKey =
-		 * test.keyType.Major; break; case Sad: songKey = test.keyType.Minor;
-		 * default: System.out.println("error"); break; } /* Pattern pattern =
-		 * new Pattern("V0 Cmajw V1 I[Flute] G4q E4q C4q E4q" ); //player.play(
-		 * "V0 E5s D#5s | E5s D#5s E5s B4s D5s C5s " + // "V1 Ri | Riii ");
-		 * //player.play( "T[Allegro] I[ROCK_Organ] Db4minH C5majW C4maj^^");
-		 * Synthesizer synth = MidiSystem.getSynthesizer(); Player player = new
-		 * Player(); player.play(
+		 * Pattern pattern = new Pattern("V0 Cmajw V1 I[Flute] G4q E4q C4q E4q"
+		 * ); //player.play( "V0 E5s D#5s | E5s D#5s E5s B4s D5s C5s " + //
+		 * "V1 Ri | Riii "); //player.play(
+		 * "T[Allegro] I[ROCK_Organ] Db4minH C5majW C4maj^^"); Synthesizer synth
+		 * = MidiSystem.getSynthesizer(); Player player = new Player();
+		 * player.play(
 		 * "T[Adagio] V2 I[Piano] C5q F#5q CmajQ V4 I[Flute] C3q+E3q E3q+G3q RiC2majI"
 		 * );
 		 */
@@ -59,8 +69,6 @@ public class test {
 		 * Player(); //pattern.setLayer(0).add(pattern2);
 		 * player.play(pattern.prepend(pattern2));
 		 */
-		Player player = new Player();
-		player.play("T[Allegro] I[Distorted_GUITAR] Db4minH C5majW C4maj^^");
 
 	}
 }
