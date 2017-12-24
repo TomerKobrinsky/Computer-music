@@ -18,10 +18,6 @@ public class session {
 		Major, Minor
 	}
 
-	public enum note {
-		C, C_SHARP, D, D_SHARP, E, F, F_SHARP, G, G_SHARP, A, A_SHARP, B
-	}
-
 	private String keyNotes[] = new String[7];
 
 	static int songTempo;
@@ -164,66 +160,4 @@ public class session {
 		}
 	}
 
-	/*
-	 * public static void main(String[] args) throws MidiUnavailableException,
-	 * InvalidMidiDataException, IOException {
-	 * 
-	 * 
-	 * 
-	 * /* Pattern pattern = new Pattern("V0 Cmajw V1 I[Flute] G4q E4q C4q E4q"
-	 * ); //player.play( "V0 E5s D#5s | E5s D#5s E5s B4s D5s C5s " + //
-	 * "V1 Ri | Riii "); //player.play(
-	 * "T[Allegro] I[ROCK_Organ] Db4minH C5majW C4maj^^"); Synthesizer synth =
-	 * MidiSystem.getSynthesizer(); Player player = new Player(); player.play(
-	 * "T[Adagio] V2 I[Piano] C5q F#5q CmajQ V4 I[Flute] C3q+E3q E3q+G3q RiC2majI"
-	 * );
-	 */
-	/*
-	 * Rhythm rhythm = new Rhythm(); rhythm.addLayer("O..O....O..O.O..");
-	 * rhythm.addLayer("..*...*...*...*."); rhythm.addLayer("^^^^^^^^^^^^^^^^");
-	 * rhythm.DEFAULT_RHYTHM_KIT.replace('O', "[BASS_DRUM]i");
-	 * rhythm.DEFAULT_RHYTHM_KIT.replace('^', "[PEDAL_HI_HAT]s Rs");
-	 * rhythm.DEFAULT_RHYTHM_KIT.replace('*', "[ACOUSTIC_SNARE]i");
-	 * rhythm.DEFAULT_RHYTHM_KIT.replace('o', "[CRASH_CYMBAL_1]s Rs");
-	 * rhythm.DEFAULT_RHYTHM_KIT.replace('.', "Ri");
-	 * rhythm.addLayer("...............o"); // Soundbank soundbank =
-	 * MidiSystem.getSoundbank(new // File("soundbank-deluxe.gm")); //
-	 * Synthesizer synth = MidiSystem.getSynthesizer(); //
-	 * synth.loadAllInstruments(soundbank);
-	 * 
-	 * Pattern pattern = rhythm.getPattern().setTempo(80); Pattern pattern2 =
-	 * new Pattern(
-	 * "I[ELECTRIC_BASS_PICK] Gq Eq Eh | Fq Dq Dh | Cq Dq Eq Fq | Gq Gq Gh | Gq Eq Eh | Fq Dq Dh"
-	 * ); pattern2.setTempo(80); pattern.repeat(4);
-	 */ // pattern.setLayer(0).add(pattern2);
-
-	// }
-	/*
-	 * private note intToNote(int input) { switch (input) { case 0: return
-	 * test.note.C;
-	 * 
-	 * case 1: return test.note.C_SHARP;
-	 * 
-	 * case 2: return test.note.D;
-	 * 
-	 * case 3: return test.note.D_SHARP;
-	 * 
-	 * case 4: return test.note.E;
-	 * 
-	 * case 5: return test.note.F;
-	 * 
-	 * case 6: return test.note.F_SHARP;
-	 * 
-	 * case 7: return test.note.G;
-	 * 
-	 * case 8: return test.note.G_SHARP;
-	 * 
-	 * case 9: return test.note.A;
-	 * 
-	 * case 10: return test.note.A_SHARP;
-	 * 
-	 * case 11: return test.note.B;
-	 * 
-	 * default: System.err.println("error with note"); return null; } }
-	 */
 }
