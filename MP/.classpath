@@ -27,5 +27,6 @@
 			<attribute name="javadoc_location" value="jar:platform:/resource/MP/lib/swing-layout-javadoc.zip!/"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/Users/shaulkobrinsky/Desktop/לימודים/שנה ג&apos;/מוסיקה ממוחשבת/jfugue-5.0.9.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
