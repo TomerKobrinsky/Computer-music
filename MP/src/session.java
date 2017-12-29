@@ -19,7 +19,6 @@ public class session {
 	}
 
 	private String keyNotes[] = new String[7];
-	private String chordNotes[] = new String[7];
 
 	static int songTempo;
 	static keyType songKeyType;
@@ -33,6 +32,7 @@ public class session {
 		songTempo = 60 + (int) (120 * Math.random());
 	}
 
+	
 	private String intToStringNote(int input) {
 		switch (input) {
 		case 0:
@@ -136,36 +136,11 @@ public class session {
 				if (currentNote > 11) {
 					currentNote -= 12;
 				}
-			}
+			}		
 			break;
 
 		}
 
-	}
-
-	private void setChords() {
-		chordNotes = keyNotes.clone();
-		switch (songKeyType) {
-		case Major:
-			chordNotes[0] += "maj";
-			chordNotes[1] += "min";
-			chordNotes[2] += "min";
-			chordNotes[3] += "maj";
-			chordNotes[4] += "maj";
-			chordNotes[5] += "min";
-			chordNotes[6] += "dim";
-			break;
-
-		case Minor:
-			chordNotes[0] += "min";
-			chordNotes[1] += "dim";
-			chordNotes[2] += "maj";
-			chordNotes[3] += "min";
-			chordNotes[4] += "min";
-			chordNotes[5] += "maj";
-			chordNotes[6] += "maj";
-			break;
-		}
 	}
 
 	/**
@@ -174,33 +149,15 @@ public class session {
 	public session() {
 		Mood Input = Mood.Sad;
 		setKey(Input);
-		setChords();
 		setTempo();
 
 		System.out.println("the tempo is: " + songTempo);
 		System.out.println("the key is: " + songKey + songKeyType);
 		Player play = new Player();
 		for (int i = 0; i < keyNotes.length; i++) {
-			System.out.println(chordNotes[i]);
-			play.play(chordNotes[i] + "W ");
+			play.play(keyNotes[i] + "q ");
+			System.out.println(keyNotes[i] + " ");
 		}
-		play.play(chordNotes[0] + "W ");
-		System.out.println(chordNotes[0] + "W ");
-	}
-
-	public String[] getKeyNotes() {
-		return keyNotes;
-	}
-
-	public static String getSongKey() {
-		return songKey;
-	}
-
-	public static int getSongTempo() {
-		return songTempo;
-	}
-	public String[] getChordNotes() {
-		return chordNotes;
 	}
 
 }
