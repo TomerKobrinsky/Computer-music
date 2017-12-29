@@ -9,14 +9,16 @@ public class welcomeForm extends JFrame{
     private JLabel header;
     private JTextField enterYourNameTextField;
     private JButton nextButton;
+    private session a;
 
-    public welcomeForm() {
+    public welcomeForm(session a) {
+        this.a = a;
         nextButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
                 JFrame frame1 = new JFrame();
-                moodForm mf = new moodForm(enterYourNameTextField.getText());
+                moodForm mf = new moodForm(a,enterYourNameTextField.getText());
                 frame1.setContentPane(mf.getPanel());
                 mf.setFrame(frame1);
                 frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
