@@ -1,11 +1,12 @@
 
-public class selectedNotes {
+public class selectedNote {
 	// will hold the pitch of the note
 	private String notePitch;
 	// will hold the length of the note
 	private double length;
 	// will hold the valid note to play woth length
 	private String noteToPlay;
+	private boolean isFakeNote;
 
 	/**
 	 * constructor
@@ -15,10 +16,34 @@ public class selectedNotes {
 	 * @param length
 	 *            - the length of the note
 	 */
-	public selectedNotes(String notePitch, double length) {
+	public selectedNote(String notePitch, double length) {
 		setNotePitch(notePitch);
+		if(notePitch.equals("empty")){
+			this.length = -1;
+		} else {
 		setLength(length);
+		}
 		setNoteToPlay();
+		isFakeNote = false; 
+	}
+	
+	/**
+	 * turn this note to FakeNote
+	 */
+	public void turnToFakeNote(){
+		this.notePitch= "empty";
+		this.isFakeNote = true;
+		this.length = -1;
+	}
+	public void turnToTrueNote(String notePitch, double length){
+		setNotePitch(notePitch);
+		if(notePitch.equals("empty")){
+			this.length = -1;
+		} else {
+		setLength(length);
+		}
+		setNoteToPlay();
+		isFakeNote = false;
 	}
 
 	/**
