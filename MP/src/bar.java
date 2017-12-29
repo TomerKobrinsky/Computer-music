@@ -23,17 +23,25 @@ public class bar {
 			barNotes[i] = new selectedNote("empty", -1);
 		}
 	}
-
-	public void changeNote(int noteToSet, String notePitch, double newLength) {
-		if ((noteToSet < 0) || (noteToSet >= barNotes.length)) {
-			System.out.println("Invalid noteToSet: " + noteToSet);
-		} else if ((sumOfLengths - barNotes[noteToSet].getLength() + newLength) > 1) {
+	/**
+	 * change a specific note
+	 * @param noteToSetIndex - the index of the note to set
+	 * @param newNotePitch - the pitch of the note
+	 * @param newLength - the length of the note
+	 */
+	public void changeNote(int noteToSetIndex, String newNotePitch, double newLength) {
+		if ((noteToSetIndex < 0) || (noteToSetIndex >= barNotes.length)) {
+			System.out.println("Invalid noteToSet: " + noteToSetIndex);
+		} else if ((sumOfLengths - barNotes[noteToSetIndex].getLength() + newLength) > 1) {
 			System.out.println("length to large");
+		} else if (newLength < 0) {
+			System.out.println("length is negative");
 		} else {
-			this.noteToSet = noteToSet;
-			barNotes[noteToSet].turnToTrueNote(notePitch, newLength);
-			for (int i = 0; i < barNotes.length; i++) {
-
+			this.noteToSet = noteToSetIndex;
+			barNotes[noteToSetIndex].turnToTrueNote(newNotePitch, newLength);
+			int notesToChange = (int) (32 * newLength);
+			for (int i = 1; i < notesToChange; i++) {
+				barNotes[noteToSetIndex + i].turnToFakeNote();
 			}
 		}
 
