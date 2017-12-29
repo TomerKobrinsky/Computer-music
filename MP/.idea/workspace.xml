@@ -28,6 +28,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="welcomeForm.form" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/welcomeForm.form">
           <provider selected="true" editor-type-id="ui-designer">
@@ -51,10 +52,22 @@
             <state relative-caret-position="90">
               <caret line="6" column="42" lean-forward="false" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
               <folding />
+=======
+      <file leaf-file-name="barMakerForm.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/barMakerForm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="21" />
+              <folding>
+                <element signature="e#152#153#0" expanded="true" />
+                <element signature="e#180#181#0" expanded="true" />
+              </folding>
+>>>>>>> 3a081c27ac49de8f09ccd24af0673133a6353af0
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="moodForm.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/moodForm.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -64,18 +77,33 @@
                 <element signature="imports" expanded="true" />
                 <element signature="e#645#646#0" expanded="true" />
                 <element signature="e#679#680#0" expanded="true" />
+=======
+      <file leaf-file-name="session.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/session.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="159" column="9" lean-forward="true" selection-start-line="159" selection-start-column="9" selection-end-line="159" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+>>>>>>> 3a081c27ac49de8f09ccd24af0673133a6353af0
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="moodForm.form" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/moodForm.form">
+=======
+      <file leaf-file-name="barMakerForm.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/barMakerForm.form">
+>>>>>>> 3a081c27ac49de8f09ccd24af0673133a6353af0
           <provider selected="true" editor-type-id="ui-designer">
             <state />
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="session.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/session.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -86,6 +114,8 @@
           </provider>
         </entry>
       </file>
+=======
+>>>>>>> 3a081c27ac49de8f09ccd24af0673133a6353af0
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -115,6 +145,11 @@
         <option value="$PROJECT_DIR$/src/welcomeForm.java" />
         <option value="$PROJECT_DIR$/src/moodForm.form" />
         <option value="$PROJECT_DIR$/src/moodForm.java" />
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/src/barMakerForm.form" />
+        <option value="$PROJECT_DIR$/src/barMakerForm.java" />
+>>>>>>> 3a081c27ac49de8f09ccd24af0673133a6353af0
       </list>
     </option>
   </component>
@@ -155,6 +190,7 @@
               <item name="MP" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
             <path>
               <item name="MP" type="b2602c69:ProjectViewProjectNode" />
               <item name="MP" type="462c0819:PsiDirectoryNode" />
@@ -167,6 +203,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="welcomeForm" type="e9f4de52:FormNode" />
             </path>
+=======
+>>>>>>> 3a081c27ac49de8f09ccd24af0673133a6353af0
           </expand>
           <select />
         </subPane>
@@ -183,7 +221,11 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+<<<<<<< HEAD
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="305" />
+=======
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="248" />
+>>>>>>> 3a081c27ac49de8f09ccd24af0673133a6353af0
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="true" />
   </component>
   <component name="RunDashboard">
@@ -348,15 +390,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1514547397877</updated>
+<<<<<<< HEAD
       <workItem from="1514547402335" duration="9725000" />
+=======
+      <workItem from="1514547402335" duration="10459000" />
+>>>>>>> 3a081c27ac49de8f09ccd24af0673133a6353af0
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="9725000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+=======
+    <option name="totallyTimeSpent" value="10459000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
+>>>>>>> 3a081c27ac49de8f09ccd24af0673133a6353af0
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -371,7 +425,11 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+>>>>>>> 3a081c27ac49de8f09ccd24af0673133a6353af0
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -479,10 +537,42 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/session.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/moodForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/moodForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#645#646#0" expanded="true" />
+            <element signature="e#679#680#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mainForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="42" lean-forward="false" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="33" lean-forward="true" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+>>>>>>> 3a081c27ac49de8f09ccd24af0673133a6353af0
           <folding />
         </state>
       </provider>
@@ -506,11 +596,16 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/moodForm.form">
+=======
+    <entry file="file://$PROJECT_DIR$/src/barMakerForm.form">
+>>>>>>> 3a081c27ac49de8f09ccd24af0673133a6353af0
       <provider selected="true" editor-type-id="ui-designer">
         <state />
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/mainForm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -527,10 +622,30 @@
             <element signature="imports" expanded="true" />
             <element signature="e#645#646#0" expanded="true" />
             <element signature="e#679#680#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/barMakerForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="21" />
+          <folding>
+            <element signature="e#152#153#0" expanded="true" />
+            <element signature="e#180#181#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/session.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="159" column="9" lean-forward="true" selection-start-line="159" selection-start-column="9" selection-end-line="159" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+>>>>>>> 3a081c27ac49de8f09ccd24af0673133a6353af0
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -539,6 +654,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> 3a081c27ac49de8f09ccd24af0673133a6353af0
   </component>
   <component name="masterDetails">
     <states>
