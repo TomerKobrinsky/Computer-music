@@ -159,5 +159,14 @@ public class session {
 			System.out.println(keyNotes[i] + " ");
 		}
 	}
+	public String[] getKeyNotes() {
+		return keyNotes;
+	}
+	public static String getSongKey() {
+		return songKey;
+	}
+	public static int getSongTempo() {
+		return songTempo;
+	}
 
 }
