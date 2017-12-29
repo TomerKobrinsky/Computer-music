@@ -33,12 +33,13 @@ public class selectedNote {
 	public void turnToFakeNote(){
 		this.notePitch= "empty";
 		this.isFakeNote = true;
-		this.length = -1;
+		this.length = 0;
+		this.noteToPlay = "";
 	}
 	public void turnToTrueNote(String notePitch, double length){
 		setNotePitch(notePitch);
 		if(notePitch.equals("empty")){
-			this.length = -1;
+			this.length = 0;
 		} else {
 		setLength(length);
 		}
