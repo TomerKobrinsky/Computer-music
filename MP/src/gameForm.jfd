@@ -1,0 +1,33 @@
+JFDML JFormDesigner: "6.0.2.0.116" Java: "1.8.0_65" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :p:224:p, comp label1:::p::p, space ::239:x}, seq t {space ::152:x, par l {seq t {comp button1:::p::p, space :p:214:p}, seq t {comp comboBox1:::p:331:p, space :p:115:p}}}}"
+			"$verticalGroup": "par l {seq l {space :p:47:p, comp label1:::p::p, space :p:31:p, comp comboBox1:::p:90:p, space ::114:x, comp button1:::p::p, space :p:72:p}}"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Choose your mood"
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "comboBox1"
+				"model": new javax.swing.DefaultComboBoxModel {
+					selectedItem: "Sad"
+					addElement( "Sad" )
+					addElement( "Happy" )
+				}
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "text"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1ActionPerformed", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}
