@@ -18,30 +18,32 @@ public class selectedNote {
 	 */
 	public selectedNote(String notePitch, double length) {
 		setNotePitch(notePitch);
-		if(notePitch.equals("empty")){
+		if (notePitch.equals("empty")) {
 			this.length = 0;
 		} else {
-		setLength(length);
+			setLength(length);
 		}
 		setNoteToPlay();
-		isFakeNote = false; 
+		isFakeNote = false;
 	}
-	
+
 	/**
 	 * turn this note to FakeNote
 	 */
-	public void turnToFakeNote(){
-		this.notePitch= "empty";
+	public void turnToFakeNote() {
+		this.notePitch = "empty";
 		this.isFakeNote = true;
 		this.length = 0;
 		this.noteToPlay = "";
+		setNoteToPlay();
 	}
-	public void turnToTrueNote(String notePitch, double length){
+
+	public void turnToTrueNote(String notePitch, double length) {
 		setNotePitch(notePitch);
-		if(notePitch.equals("empty")){
+		if (notePitch.equals("empty")) {
 			this.length = 0;
 		} else {
-		setLength(length);
+			setLength(length);
 		}
 		setNoteToPlay();
 		isFakeNote = false;
@@ -53,12 +55,15 @@ public class selectedNote {
 	 * @param length
 	 */
 	public void setLength(double length) {
-		if ((length < 1) && (length > 0)) {
+		// (length <= 1) &&
+		if ((length > 0)) {
 			this.length = length;
+			setNoteToPlay();
 		} else {
 			System.out.println("constructed a note with invalid length");
 		}
 	}
+
 	/**
 	 * setter for noteToPlay
 	 */
@@ -73,6 +78,7 @@ public class selectedNote {
 	 */
 	public void setNotePitch(String notePitch) {
 		this.notePitch = notePitch;
+		setNoteToPlay();
 	}
 
 	/**
@@ -83,7 +89,6 @@ public class selectedNote {
 	public double getLength() {
 		return length;
 	}
-	
 
 	/**
 	 * getter for the pitch of the note
@@ -93,13 +98,21 @@ public class selectedNote {
 	public String getNotePitch() {
 		return notePitch;
 	}
+
 	public String getNoteToPlay() {
 		return noteToPlay;
 	}
-/**
- * parsing to noteToPlay according to jfugue  
- * @return noteToPLAY - Valid jfugue note
- */
+	public Boolean getIsFakeNote(){
+		return this.isFakeNote;
+	}
+	
+	
+
+	/**
+	 * parsing to noteToPlay according to jfugue
+	 * 
+	 * @return noteToPLAY - Valid jfugue note
+	 */
 	private String parsingWithLength() {
 		String noteWithLength = getNotePitch();
 		double thislength = getLength();
@@ -111,21 +124,25 @@ public class selectedNote {
 		if (thislength == 0.5) {
 			this.noteToPlay = noteWithLength + "h";
 		} else
-			// length is 1/4
-			if (thislength == 0.25) {
+		// length is 1/4
+		if (thislength == 0.25) {
 			this.noteToPlay = noteWithLength + "q";
 		} else
-			// length is 1/8
-			if (thislength == 0.125) {
+		// length is 1/8
+		if (thislength == 0.125) {
 			this.noteToPlay = noteWithLength + "i";
-		} else 
-			// length is 1/16
-			if (thislength == 0.0625) {
+		} else
+		// length is 1/16
+		if (thislength == 0.0625) {
 			this.noteToPlay = noteWithLength + "s";
 		} else
-			// length is 1/32
-			if (thislength == 0.5) {
+		// length is 1/32
+		if (thislength == 0.5) {
 			this.noteToPlay = noteWithLength + "t";
+		} else
+		// length is 0
+		if (thislength == 0) {
+			this.noteToPlay = "";
 		}
 		return this.noteToPlay;
 	}
