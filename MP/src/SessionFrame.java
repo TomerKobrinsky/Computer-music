@@ -34,14 +34,14 @@ public class sessionFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e)
             {
-
                 JButton b = (JButton)e.getSource();
-                ((sessionFrame)b.getParent().getParent().getParent().getParent()).setLabel(Integer.parseInt(b.getName()), b.getName());
+                int buttonIndex = Integer.parseInt(b.getName());
 
                 notesDialog dialog = new notesDialog(a);
                 dialog.setSize(300, 260);
                 dialog.setVisible(true);
-                System.exit(0);
+
+                ((sessionFrame)b.getParent().getParent().getParent().getParent()).setLabel(buttonIndex, "");
             }
         });
 
