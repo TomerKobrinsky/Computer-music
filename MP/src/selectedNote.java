@@ -19,7 +19,7 @@ public class selectedNote {
 	public selectedNote(String notePitch, double length) {
 		setNotePitch(notePitch);
 		if(notePitch.equals("empty")){
-			this.length = -1;
+			this.length = 0;
 		} else {
 		setLength(length);
 		}
