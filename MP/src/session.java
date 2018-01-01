@@ -172,20 +172,20 @@ public class session {
 	 * initialize the current session
 	 */
 	public session() {
-		Mood Input = Mood.Sad;
+		Mood Input = Mood.Happy;
 		setKey(Input);
 		setChords();
 		setTempo();
 
 		System.out.println("the tempo is: " + songTempo);
 		System.out.println("the key is: " + songKey + songKeyType);
-		Player play = new Player();
+		//Player play = new Player();
 		for (int i = 0; i < keyNotes.length; i++) {
-			System.out.println(chordNotes[i]);
-			play.play(chordNotes[i] + "W ");
+			System.out.println(keyNotes[i]);
+		//	play.play(chordNotes[i] + "W ");
 		}
-		play.play(chordNotes[0] + "W ");
-		System.out.println(chordNotes[0] + "W ");
+	//	play.play(chordNotes[0] + "W ");
+		//System.out.println(chordNotes[0]);
 	}
 
 	public String[] getKeyNotes() {

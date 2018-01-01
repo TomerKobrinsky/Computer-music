@@ -4,7 +4,7 @@ public class bar {
 	private double timeSignature;
 	private int barSize;
 	private selectedNote[] barNotes;
-	int noteToSet;
+	int noteToSetIndex;
 	private String barToPlay;
 
 	/**
@@ -15,20 +15,22 @@ public class bar {
 	 */
 	public bar(double timeSignature) {
 		sumOfLengths = 0;
-		noteToSet = 0;
+		noteToSetIndex = 0;
 		this.timeSignature = timeSignature;
 		barSize = (int) (timeSignature * 32);
 		barNotes = new selectedNote[barSize];
 		barToPlay = "";
 		// sets new bar with empty notes
 		for (int i = 0; i < barNotes.length; i++) {
-			barNotes[i] = new selectedNote("empty", -1);
+			barNotes[i] = new selectedNote("empty", 0);
 		}
 	}
 
 	public void setCurrentNote(String newNotePitch, double newLength) {
 		if (sumOfLengths < 1) {
-			changeNote(noteToSet, newNotePitch, newLength);
+			changeNote(noteToSetIndex, newNotePitch, newLength);
+		} else {
+			System.out.println("bar full");
 		}
 	}
 
@@ -43,31 +45,56 @@ public class bar {
 	 *            - the length of the note
 	 */
 	public void changeNote(int noteToSetIndex, String newNotePitch, double newLength) {
+		// the sum of the lengths of the entire notes of the bar(with the new
+		// length)
+		double newSumOfLengths = sumOfLengths - barNotes[noteToSetIndex].getLength() + newLength;
+		// if the index of the note is not in the bar then it's an invalid index
 		if ((noteToSetIndex < 0) || (noteToSetIndex >= barNotes.length)) {
 			System.out.println("Invalid noteToSet: " + noteToSetIndex);
-		} else if ((sumOfLengths - barNotes[noteToSetIndex].getLength() + newLength) > 1) {
+		} else
+		// if the newSumOfLength is larger than the timeSignature then the new
+		// length is too large
+		if (newSumOfLengths > this.timeSignature) {
 			System.out.println("length to large");
-		} else if (newLength < 0) {
+		} else
+		// length cannot be negative
+		if (newLength < 0) {
 			System.out.println("length is negative");
 		} else {
-			sumOfLengths += newLength - barNotes[noteToSetIndex].getLength();
-			this.noteToSet = noteToSetIndex;
+		// otherwise we can set a new note
+			this.noteToSetIndex = noteToSetIndex;
 			barNotes[noteToSetIndex].turnToTrueNote(newNotePitch, newLength);
 			int notesToChange = (int) (32 * newLength);
 			for (int i = 1; i < notesToChange; i++) {
+				//if we try to override a non empty note then the length of the changed note is too large
+				//so the note we tried to change get shorter.
+				if (!barNotes[noteToSetIndex + i].getNotePitch().equals("empty")) {
+					System.out.println("max length is " + i + " / 32");
+					newSumOfLengths -= barNotes[noteToSetIndex].getLength() + (i / 32);
+					barNotes[noteToSetIndex].setLength(i / 32);
+					break;
+				}
 				barNotes[noteToSetIndex + i].turnToFakeNote();
 			}
+			sumOfLengths = newSumOfLengths;
 		}
+		this.noteToSetIndex += (barNotes[noteToSetIndex].getLength() * 32);
 	}
 
 	/**
 	 * sets a The Bar to play
 	 */
-	private void setBarToPlay() {
+	public void setBarToPlay() {
 		barToPlay = "";
 		for (int i = 0; i < barNotes.length;) {
 			barToPlay += barNotes[i].getNoteToPlay() + " ";
+			double noteLength = barNotes[i].getLength();
+			if(noteLength > 0){
 			i += (barNotes[i].getLength() * 32);
+			} else {
+				i++;
+			}
+			
 		}
 
 	}
