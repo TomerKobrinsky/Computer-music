@@ -35,6 +35,7 @@ public class selectedNote {
 		this.isFakeNote = true;
 		this.length = 0;
 		this.noteToPlay = "";
+		setNoteToPlay();
 	}
 
 	public void turnToTrueNote(String notePitch, double length) {
@@ -57,6 +58,7 @@ public class selectedNote {
 		// (length <= 1) &&
 		if ((length > 0)) {
 			this.length = length;
+			setNoteToPlay();
 		} else {
 			System.out.println("constructed a note with invalid length");
 		}
@@ -76,6 +78,7 @@ public class selectedNote {
 	 */
 	public void setNotePitch(String notePitch) {
 		this.notePitch = notePitch;
+		setNoteToPlay();
 	}
 
 	/**

@@ -12,11 +12,13 @@ public class main {
 		}
 		notes[a.getKeyNotes().length] = notes[0];
 		bar bar = new bar(4/4);
-		for (int i = 0; i < notes.length; i++) {
-			bar.setCurrentNote(notes[i], 0.125);
+		//for (int i = 0; i < notes.length; i++) {
+			bar.setCurrentNote(notes[0], 0.125);
+			bar.setCurrentNote(notes[1], 0.125);
 			//bar.setCurrentNote(notes[a.getKeyNotes().length], 0.5);
 			//bar.setCurrentNote(notes[0], 0.125);
-		}
+		//}
+		bar.changeNote(0, notes[2], 0.5);
 		//bar.setCurrentNote("empty", 0.125);
 		bar.setBarToPlay();
 		Player play = new Player();

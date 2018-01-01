@@ -70,8 +70,8 @@ public class bar {
 				//so the note we tried to change get shorter.
 				if (!barNotes[noteToSetIndex + i].getNotePitch().equals("empty")) {
 					System.out.println("max length is " + i + " / 32");
-					newSumOfLengths -= barNotes[noteToSetIndex].getLength() + (i / 32);
-					barNotes[noteToSetIndex].setLength(i / 32);
+					newSumOfLengths += -barNotes[noteToSetIndex].getLength() + (i / 32.0);
+					barNotes[noteToSetIndex].setLength(i / 32.0);
 					break;
 				}
 				barNotes[noteToSetIndex + i].turnToFakeNote();
