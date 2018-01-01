@@ -5,6 +5,12 @@ import org.jfugue.player.Player;
 
 public class main {
 	public static void main(String[] args){
+
+		sessionFrame f = new sessionFrame();
+
+		f.setVisible(true);
+
+		/*
 		session a= new session();
 		
 		
@@ -15,7 +21,7 @@ public class main {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(1500, 1000); // << not working!!!
 		frame.setVisible(true);
-		
+		*/
 		
 	}
 }

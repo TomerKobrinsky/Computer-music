@@ -112,4 +112,9 @@ public class bar {
 		return barToPlay;
 	}
 
+	public int getBarSize()
+	{
+		return barSize;
+	}
+
 }
