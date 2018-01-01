@@ -177,13 +177,13 @@ public class session {
 		setChords();
 		setTempo();
 
-		System.out.println("the tempo is: " + songTempo);
-		System.out.println("the key is: " + songKey + songKeyType);
+	//	System.out.println("the tempo is: " + songTempo);
+	//	System.out.println("the key is: " + songKey + songKeyType);
 		//Player play = new Player();
-		for (int i = 0; i < keyNotes.length; i++) {
-			System.out.println(keyNotes[i]);
+	//	for (int i = 0; i < keyNotes.length; i++) {
+	//		System.out.println(keyNotes[i]);
 		//	play.play(chordNotes[i] + "W ");
-		}
+	//	}
 	//	play.play(chordNotes[0] + "W ");
 		//System.out.println(chordNotes[0]);
 	}
