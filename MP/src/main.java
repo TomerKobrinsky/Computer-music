@@ -5,8 +5,9 @@ import org.jfugue.player.Player;
 
 public class main {
 	public static void main(String[] args){
+		session a = new session();
 
-		sessionFrame f = new sessionFrame();
+		sessionFrame f = new sessionFrame(a);
 
 		f.setVisible(true);
 

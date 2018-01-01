@@ -9,10 +9,11 @@ public class sessionFrame extends JFrame {
     private JButton buttons[];
     private JLabel labels[];
     private bar frameBar;
+    private session a;
 
-    public sessionFrame()
+    public sessionFrame(session a)
     {
-
+        this.a = this.a;
         //frameBar = bar;
         int barSize = 32; //bar.getBarSize();
 
@@ -36,6 +37,11 @@ public class sessionFrame extends JFrame {
 
                 JButton b = (JButton)e.getSource();
                 ((sessionFrame)b.getParent().getParent().getParent().getParent()).setLabel(Integer.parseInt(b.getName()), b.getName());
+
+                notesDialog dialog = new notesDialog(a);
+                dialog.setSize(300, 200);
+                dialog.setVisible(true);
+                System.exit(0);
             }
         });
 

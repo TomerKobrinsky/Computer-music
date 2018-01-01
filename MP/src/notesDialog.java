@@ -132,11 +132,4 @@ public class notesDialog extends JDialog {
         dispose();
     }
 
-    public static void main(String[] args) {
-        session a = new session();
-        notesDialog dialog = new notesDialog(a);
-        dialog.setSize(300, 200);
-        dialog.setVisible(true);
-        System.exit(0);
-    }
 }
