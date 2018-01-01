@@ -12,7 +12,7 @@ public class notesDialog extends JDialog {
     private JLabel label1;
     private JLabel label2;
     private String chord;
-    private String duration;
+    private double duration;
     private JButton selectedButton;
 
 
@@ -94,17 +94,19 @@ public class notesDialog extends JDialog {
             x += 40;
         }
         buttons[buttons.length-1] = new JButton("Break");
+        buttons[buttons.length-1].setBounds(100,75,100,25);
+        buttons[buttons.length-1].addActionListener(buttonAction);
         pane.add(buttons[buttons.length-1]);
-        this.buttonOK.setBounds(230,140,70,30);
-        this.buttonDelete.setBounds(0,140,70,30);
+        this.buttonOK.setBounds(230,200,70,30);
+        this.buttonDelete.setBounds(0,200,70,30);
         this.buttonDelete.setText("Delete");
         String[] list = { "1", "1/2", "1/8", "1/16", "1/32" };
         this.durationBox = new JComboBox(list);
-        this.durationBox.setBounds(100, 70,100,100);
+        this.durationBox.setBounds(100, 110,100,100);
         this.label1 = new JLabel("Choose Chord");
         this.label2 = new JLabel("Choose Duration");
         this.label1.setBounds(100,5,100,20);
-        this.label2.setBounds(100,80,200,20);
+        this.label2.setBounds(100,120,200,20);
 
         pane.add(this.label1);
         pane.add(this.label2);
@@ -116,7 +118,28 @@ public class notesDialog extends JDialog {
     }
 
     private void onOK() {
-        this.duration = this.durationBox.getSelectedItem().toString();
+
+        String durationString = this.durationBox.getSelectedItem().toString();
+        switch (durationString) {
+            case "1":
+                duration = 1;
+                break;
+            case "1/2":
+                duration = 1/2;
+                break;
+            case "1/4":
+                duration = 1/4;
+                break;
+            case "1/8":
+                duration = 1/8;
+                break;
+            case "1/16":
+                duration = 1/16;
+                break;
+            case "1/32":
+                duration = 1/32;
+                break;
+        }
         if (this.chord != null) {
             dispose();
         }
@@ -130,6 +153,14 @@ public class notesDialog extends JDialog {
     private void onCancel() {
         // add your code here if necessary
         dispose();
+    }
+
+    public double getDuration() {
+        return duration;
+    }
+
+    public String getChord() {
+        return chord;
     }
 
 }

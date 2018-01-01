@@ -39,7 +39,7 @@ public class sessionFrame extends JFrame {
                 ((sessionFrame)b.getParent().getParent().getParent().getParent()).setLabel(Integer.parseInt(b.getName()), b.getName());
 
                 notesDialog dialog = new notesDialog(a);
-                dialog.setSize(300, 200);
+                dialog.setSize(300, 260);
                 dialog.setVisible(true);
                 System.exit(0);
             }
