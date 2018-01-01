@@ -102,6 +102,11 @@ public class selectedNote {
 	public String getNoteToPlay() {
 		return noteToPlay;
 	}
+	public Boolean getIsFakeNote(){
+		return this.isFakeNote;
+	}
+	
+	
 
 	/**
 	 * parsing to noteToPlay according to jfugue

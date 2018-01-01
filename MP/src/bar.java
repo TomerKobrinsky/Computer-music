@@ -60,14 +60,19 @@ public class bar {
 		// length cannot be negative
 		if (newLength < 0) {
 			System.out.println("length is negative");
+		} else		
+		//if current note is fake note then it is need for a previous note	
+			if (barNotes[noteToSetIndex].getIsFakeNote()) {
+			System.out.println("current note is fake note. cannot change");
 		} else {
-		// otherwise we can set a new note
+			// otherwise we can set a new note
 			this.noteToSetIndex = noteToSetIndex;
 			barNotes[noteToSetIndex].turnToTrueNote(newNotePitch, newLength);
 			int notesToChange = (int) (32 * newLength);
 			for (int i = 1; i < notesToChange; i++) {
-				//if we try to override a non empty note then the length of the changed note is too large
-				//so the note we tried to change get shorter.
+				// if we try to override a non empty note then the length of the
+				// changed note is too large
+				// so the note we tried to change get shorter.
 				if (!barNotes[noteToSetIndex + i].getNotePitch().equals("empty")) {
 					System.out.println("max length is " + i + " / 32");
 					newSumOfLengths += -barNotes[noteToSetIndex].getLength() + (i / 32.0);
@@ -89,12 +94,12 @@ public class bar {
 		for (int i = 0; i < barNotes.length;) {
 			barToPlay += barNotes[i].getNoteToPlay() + " ";
 			double noteLength = barNotes[i].getLength();
-			if(noteLength > 0){
-			i += (barNotes[i].getLength() * 32);
+			if (noteLength > 0) {
+				i += (barNotes[i].getLength() * 32);
 			} else {
 				i++;
 			}
-			
+
 		}
 
 	}
