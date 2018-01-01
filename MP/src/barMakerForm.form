@@ -8,6 +8,13 @@
       <background color="-1181441"/>
     </properties>
     <border type="none"/>
-    <children/>
+    <children>
+      <component id="d4d42" class="javax.swing.JLabel">
+        <constraints/>
+        <properties>
+          <text value="ghfghfgh"/>
+        </properties>
+      </component>
+    </children>
   </grid>
 </form>
