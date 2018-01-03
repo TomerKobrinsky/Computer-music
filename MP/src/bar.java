@@ -137,4 +137,8 @@ public class bar {
 		barNotes[index].turnToTrueNote("empty" , 0 );
 	}
 
+	public boolean isEmptyNoteInIndex(int index)
+	{
+		return (barNotes[index].getNotePitch().compareTo("empty") == 0);
+	}
 }

@@ -51,15 +51,30 @@ public class sessionFrame extends JFrame {
                     if (dialog.getChord() != null)
                     {
 
-                        while (dialog.getDuration() != 0 && (dialog.getDuration() * 32 + buttonIndex - 1 >= barSize || !f.isValidDur(buttonIndex, (int) (dialog.getDuration() * 32))))
+                        f.setLabel(buttonIndex, "");
+                        b.setBackground(null);
+                        frameBar.ternToEmptyNoteInIndex(buttonIndex);
+
+                        int j = 1;
+                        while(j + buttonIndex  < barSize && frameBar.isEmptyNoteInIndex(j + buttonIndex))
+                        {
+                            buttons[buttonIndex + j].setBackground(null);
+                            frameBar.ternToEmptyNoteInIndex(buttonIndex + j );
+                            j++;
+                        }
+
+                        while (dialog.getDuration() != 0 && (dialog.getDuration() * 32 + buttonIndex -1 > barSize || !f.isValidDur(buttonIndex, (int) (dialog.getDuration() * 32))))
                         {
                             notesDialog.infoBox("!!!", "!!!");
                             dialog.setVisible(true);
                         }
 
 
+
+
                         if(dialog.getChord().compareTo("empty") != 0 )
                         {
+
                             f.setLabel(buttonIndex, dialog.getChord());
 
                             Random r = new Random();
@@ -73,30 +88,10 @@ public class sessionFrame extends JFrame {
                             {
 
                                 buttons[buttonIndex + i].setBackground(randomColor);
-                                //           f.setLButtonsEnabled(buttonIndex + i, false);
                                 frameBar.ternToFakeNoteInIndex(buttonIndex + i);
                             }
                         }
-                        else
-                        {
-                            f.setLabel(buttonIndex, "");
-                            b.setBackground(null);
 
-                            int i = 1;
-                            while(i + buttonIndex  < barSize && buttons[i + buttonIndex].getBackground() != null)
-                            {
-                                buttons[buttonIndex + i].setBackground(null);
-                                //           f.setLButtonsEnabled(buttonIndex + i, false);
-                              //  frameBar.ternToFakeNoteInIndex(buttonIndex + i);
-                                frameBar.ternToEmptyNoteInIndex(buttonIndex + i );
-                                i++;
-                            }
-
-
-
-
-
-                        }
                     }
 
                 }
