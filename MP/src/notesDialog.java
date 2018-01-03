@@ -125,19 +125,19 @@ public class notesDialog extends JDialog {
                 duration = 1;
                 break;
             case "1/2":
-                duration = 1/2;
+                duration = 1/2.0;
                 break;
             case "1/4":
-                duration = 1/4;
+                duration = 1/4.0;
                 break;
             case "1/8":
-                duration = 1/8;
+                duration = 1/8.0;
                 break;
             case "1/16":
-                duration = 1/16;
+                duration = 1/16.0;
                 break;
             case "1/32":
-                duration = 1/32;
+                duration = 1/32.0;
                 break;
         }
         if (this.chord != null) {
@@ -145,8 +145,11 @@ public class notesDialog extends JDialog {
         }
     }
 
-    private void onDelete() {
-        // add your code here if necessary
+    private void onDelete()
+    {
+        this.chord = "empty";
+        this.duration = 0;
+
         dispose();
     }
 
@@ -161,6 +164,11 @@ public class notesDialog extends JDialog {
 
     public String getChord() {
         return chord;
+    }
+
+    public static void infoBox(String infoMessage, String titleBar)
+    {
+        JOptionPane.showMessageDialog(null, infoMessage, "InfoBox: " + titleBar, JOptionPane.INFORMATION_MESSAGE);
     }
 
 }

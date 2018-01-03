@@ -117,4 +117,24 @@ public class bar {
 		return barSize;
 	}
 
+	public selectedNote getNoteOnIndex(int index)
+	{
+		return barNotes[index];
+	}
+
+	public boolean isNoteFree(int index)
+	{
+		return barNotes[index].isNoteIsFree();
+	}
+
+	public void ternToFakeNoteInIndex(int index)
+	{
+		barNotes[index].turnToFakeNote();
+	}
+
+	public void ternToEmptyNoteInIndex(int index)
+	{
+		barNotes[index].turnToTrueNote("empty" , 0 );
+	}
+
 }

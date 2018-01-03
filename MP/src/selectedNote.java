@@ -74,7 +74,7 @@ public class selectedNote {
 	/**
 	 * setter for the pitch of the note
 	 * 
-	 * @param pitch
+	// * @param pitch
 	 */
 	public void setNotePitch(String notePitch) {
 		this.notePitch = notePitch;
@@ -84,7 +84,7 @@ public class selectedNote {
 	/**
 	 * getter for the length of the note
 	 * 
-	 * @param length
+	// * @param length
 	 */
 	public double getLength() {
 		return length;
@@ -93,7 +93,7 @@ public class selectedNote {
 	/**
 	 * getter for the pitch of the note
 	 * 
-	 * @param pitch
+	// * @param pitch
 	 */
 	public String getNotePitch() {
 		return notePitch;
@@ -145,5 +145,16 @@ public class selectedNote {
 			this.noteToPlay = "";
 		}
 		return this.noteToPlay;
+	}
+
+	public boolean isNoteIsFree()
+	{
+		boolean isFree = false;
+		if(notePitch.compareTo("empty") == 0 && (!isFakeNote) )
+		{
+			isFree = true;
+		}
+
+		return isFree;
 	}
 }
