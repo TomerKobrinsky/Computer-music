@@ -49,6 +49,8 @@ public class bar {
 		// length)
 		double newSumOfLengths = sumOfLengths - barNotes[noteToSetIndex].getLength() + newLength;
 		// if the index of the note is not in the bar then it's an invalid index
+
+
 		if ((noteToSetIndex < 0) || (noteToSetIndex >= barNotes.length)) {
 			System.out.println("Invalid noteToSet: " + noteToSetIndex);
 		} else
@@ -139,6 +141,12 @@ public class bar {
 
 	public boolean isEmptyNoteInIndex(int index)
 	{
-		return (barNotes[index].getNotePitch().compareTo("empty") == 0);
+		return (barNotes[index].getNotePitch().compareTo("empty") == 0 && !barNotes[index].getIsFakeNote());
 	}
+
+	public boolean isFakeNoteOnindex(int index)
+	{
+		return barNotes[index].getIsFakeNote();
+	}
+
 }

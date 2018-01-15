@@ -3,7 +3,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
-
+import org.jfugue.pattern.Pattern;
+import org.jfugue.player.Player;
 public class sessionFrame extends JFrame {
 
     private JPanel panel1;
@@ -30,6 +31,8 @@ public class sessionFrame extends JFrame {
         buttons = new JButton[barSize];
         labels = new JLabel[barSize];
 
+       JButton play = new JButton();
+
 
         ActionListener t  = (new ActionListener() {
             @Override
@@ -39,7 +42,7 @@ public class sessionFrame extends JFrame {
                 JButton b = (JButton)e.getSource();
                 int buttonIndex = Integer.parseInt(b.getName());
 
-                if(!bar.getNoteOnIndex(buttonIndex).getIsFakeNote())
+                if(!frameBar.isFakeNoteOnindex(buttonIndex))
                 {
                     notesDialog dialog = new notesDialog(frameSsession);
                     dialog.setSize(300, 260);
@@ -56,7 +59,7 @@ public class sessionFrame extends JFrame {
                         frameBar.ternToEmptyNoteInIndex(buttonIndex);
 
                         int j = 1;
-                        while(j + buttonIndex  < barSize && frameBar.isEmptyNoteInIndex(j + buttonIndex))
+                        while(j + buttonIndex  < barSize && frameBar.isFakeNoteOnindex(j + buttonIndex))
                         {
                             buttons[buttonIndex + j].setBackground(null);
                             frameBar.ternToEmptyNoteInIndex(buttonIndex + j );
@@ -68,8 +71,6 @@ public class sessionFrame extends JFrame {
                             notesDialog.infoBox("!!!", "!!!");
                             dialog.setVisible(true);
                         }
-
-
 
 
                         if(dialog.getChord().compareTo("empty") != 0 )
@@ -86,7 +87,6 @@ public class sessionFrame extends JFrame {
 
                             for (int i = 1; i < dialog.getDuration() * 32; i++)
                             {
-
                                 buttons[buttonIndex + i].setBackground(randomColor);
                                 frameBar.ternToFakeNoteInIndex(buttonIndex + i);
                             }
@@ -97,6 +97,59 @@ public class sessionFrame extends JFrame {
                 }
             }
         });
+
+
+      ActionListener a  = (new ActionListener() {
+          @Override
+          public void actionPerformed(ActionEvent e) {
+
+              int i = 0 ;
+              int counter;
+              int j;
+              while(i < barSize)
+              {
+                  if(frameBar.isEmptyNoteInIndex(i))
+                  {
+                      counter = 1;
+                      j = i + 1;
+                      while(j < barSize && frameBar.isEmptyNoteInIndex(j))
+                      {
+                          counter++;
+                          j++;
+                      }
+
+                      if(j < barSize)
+                      {
+                        // counter--;
+                      }
+
+                      System.out.println(i + " " + counter);
+                      labels[i].setText("R");
+                      frameBar.changeNote( i , "R" , (counter/32.0));
+                      i = j;
+                  }
+                  else
+                  {
+                       i++;
+                  }
+              }
+
+             frameBar.setBarToPlay();
+             Player play = new Player();
+             Pattern firstPattern = new Pattern(bar.getBarToPlay());
+             firstPattern.setTempo(session.songTempo);
+             System.out.println(frameBar.getBarToPlay());
+
+
+          }
+      });
+
+        play.setName("Play");
+
+        play.addActionListener(a);
+
+        play.setBounds(10, 300, 100 ,50);
+        panel1.add(play);                                     
 
         int counter = 0;
         int sum = 10;
